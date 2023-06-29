@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.7;
+  color: gray;
+}
+
+.container {
+  width: 77%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+
+header .headerAll {
+  width: 100%;
+  height: 58px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.1);
+}
+header .headerAll .container .headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .headerAll .container .headerContent .logo {
+  padding: 0px 15px;
+}
+header .headerAll .container .headerContent .logo a {
+  color: #007bff;
+  font-size: 30px;
+  font-weight: 900;
+}
+header .headerAll .container .headerContent .navBar {
+  display: flex;
+  padding-left: 40px;
+}
+header .headerAll .container .headerContent .navBar .navList {
+  display: flex;
+  gap: 40px;
+}
+header .headerAll .container .headerContent .navBar .navList .navItem a {
+  color: #000;
+  transition: 0.4s ease;
+}
+header .headerAll .container .headerContent .navBar .navList .navItem a:hover {
+  color: #007bff;
+}
+header .headerAll .container .headerContent .navBar .navList .navItem .active {
+  color: #007bff;
+}
+header .headerAll .container .headerContent .navBar .navList .navItem .dropdownList {
+  display: none;
+}
+
+main .aboutSection {
+  padding: 80px 0;
+}
+main .aboutSection .container .aboutTitle h2 {
+  color: #007bff;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  margin: 0 0 56px;
+}
+main .aboutSection .container .aboutContent {
+  display: flex;
+  justify-content: space-between;
+}
+main .aboutSection .container .aboutContent .aboutImage {
+  margin: 0 0 48px;
+  padding: 0 15px;
+  position: relative;
+}
+main .aboutSection .container .aboutContent .aboutImage img {
+  width: 540px;
+  height: 405px;
+}
+main .aboutSection .container .aboutContent .aboutImage::after {
+  width: 300px;
+  height: 300px;
+  content: "";
+  z-index: -1;
+  border-radius: 50%;
+  position: absolute;
+  top: 200px;
+  right: -70px;
+  background: #f8f9fa;
+}
+main .aboutSection .container .aboutContent .aboutInfo {
+  width: 475px;
+}
+main .aboutSection .container .aboutContent .aboutInfo h3 {
+  margin: 0 0 24px;
+  font-size: 28px;
+  font-weight: 400;
+}
+main .aboutSection .container .aboutContent .aboutInfo p {
+  font-size: 16px;
+  margin: 0 0 16px;
+  line-height: 1.7;
+  color: gray;
+  font-weight: 400;
+}
+main .aboutSection .container .aboutContent .aboutInfo .aboutList {
+  margin-bottom: 74px;
+}
+main .aboutSection .container .aboutContent .aboutInfo .aboutList .aboutItem {
+  margin: 0 0 15px;
+  color: gray;
+  font-weight: 400;
+  font-size: 16px;
+}
+main .aboutSection .container .aboutContent .aboutInfo .aboutList .aboutItem i {
+  padding-right: 25px;
+  color: #71bc42;
+}
+main .aboutSection .container .aboutContent .aboutInfo .btnCont {
+  margin-bottom: 16px;
+}
+main .aboutSection .container .aboutContent .aboutInfo .btnCont .contactBtn {
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 14px 30px;
+  display: inline-block;
+}
+main .aboutSection .container .aboutContent .aboutInfo .btnCont .contactBtn:hover {
+  background-color: black;
+}
+main .teamSection {
+  width: 100%;
+  padding: 80px 0;
+}
+main .teamSection .container .row {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .teamSection .container .row .teamText {
+  width: 66%;
+  text-align: center;
+}
+main .teamSection .container .row .teamText .teamTitle {
+  color: #007bff;
+  font-size: 40px;
+  font-weight: 900;
+  margin: 0 0 16px;
+}
+main .teamSection .container .row .teamText p {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 300;
+  height: 68px;
+  color: gray;
+  line-height: 1.7;
+}
+main .teamSection .container .row .teamCards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+main .teamSection .container .row .teamCards .cardTeam {
+  max-width: 23%;
+  flex: 0 0 23%;
+}
+main .teamSection .container .row .teamCards .cardTeam .teamCard {
+  width: 100%;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+main .teamSection .container .row .teamCards .cardTeam .teamCard .teamImage {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+main .teamSection .container .row .teamCards .cardTeam .teamCard .teamImage .socialList {
+  width: 50px;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 10px;
+  transform: translateX(-50px);
+  background: #007bff;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+main .teamSection .container .row .teamCards .cardTeam .teamCard .teamImage .socialList .socialItem a i {
+  color: white;
+}
+main .teamSection .container .row .teamCards .cardTeam .teamCard .teamImage img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .teamSection .container .row .teamCards .cardTeam .teamCard .teamInfo {
+  padding: 16px;
+}
+main .teamSection .container .row .teamCards .cardTeam .teamCard .teamInfo .teamName {
+  color: #000;
+  font-size: 19.2px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+main .teamSection .container .row .teamCards .cardTeam .teamCard .teamInfo span {
+  color: #cccccc;
+  font-size: 12.8px;
+  letter-spacing: 0.8px;
+}
+main .teamSection .container .row .teamCards .cardTeam .teamCard:hover .teamImage .socialList {
+  visibility: visible;
+  transform: translateX(0);
+}
+main .contactSection {
+  background: #f8f9fa;
+  width: 100%;
+  padding: 80px 0;
+}
+main .contactSection .container .contactTitle {
+  width: 66%;
+  text-align: center;
+  margin: 0 auto;
+}
+main .contactSection .container .contactTitle h2 {
+  color: #007bff;
+  font-size: 40px;
+  font-weight: 900;
+  margin: 0 0 50px;
+}
+main .contactSection .container .contactInfo {
+  width: 100%;
+}
+main .contactSection .container .contactInfo .row {
+  flex-wrap: wrap;
+}
+main .contactSection .container .contactInfo .row .adress {
+  padding: 0 15px;
+  text-align: center;
+  width: 33%;
+}
+main .contactSection .container .contactInfo .row .adress i {
+  display: block;
+  color: #007bff;
+  margin: 0 0 8px;
+  text-align: center;
+}
+main .contactSection .container .contactInfo .row .adress p {
+  line-height: 1.7;
+  color: gray;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 0 80px;
+}
+main .contactSection .container .contactInfo .row .tel {
+  padding: 0 15px;
+  text-align: center;
+  width: 33%;
+}
+main .contactSection .container .contactInfo .row .tel i {
+  color: #007bff;
+  display: block;
+  margin-bottom: 8px;
+}
+main .contactSection .container .contactInfo .row .tel a {
+  color: #007bff;
+}
+main .contactSection .container .contactInfo .row .email {
+  padding: 0 15px;
+  width: 33%;
+  text-align: center;
+}
+main .contactSection .container .contactInfo .row .email i {
+  color: #007bff;
+  display: block;
+  margin-bottom: 8px;
+}
+main .contactSection .container .contactInfo .row a {
+  color: #007bff;
+}
+main .contactSection .container .contactForm {
+  width: 100%;
+  padding: 48px;
+  border: #fff solid;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+main .contactSection .container .contactForm .formTitle {
+  margin-bottom: 18px;
+}
+main .contactSection .container .contactForm .formTitle h2 {
+  font-size: 24px;
+  color: black;
+  font-weight: 400;
+}
+main .contactSection .container .contactForm .firstNameInput {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+main .contactSection .container .contactForm .firstNameInput #id {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+main .contactSection .container .contactForm .firstNameInput #id label {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 8px;
+}
+main .contactSection .container .contactForm .firstNameInput #id input {
+  height: 43px;
+  border-radius: 30px;
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  margin: 0;
+}
+main .contactSection .container .contactForm label {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 8px;
+}
+main .contactSection .container .contactForm input {
+  outline: none;
+  height: 43px;
+  border-radius: 30px;
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+}
+main .contactSection .container .contactForm textarea {
+  height: 181px;
+  border-radius: 30px;
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  resize: none;
+  outline: none;
+}
+main .contactSection .container .contactForm button {
+  outline: none;
+  margin-top: 22px;
+  transition: 0.3s ease;
+  width: 173px;
+  height: 46px;
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 30px;
+  border: 1px solid #007bff;
+  padding: 10px 30px;
+  display: inline-block;
+}
+main .contactSection .container .contactForm button:hover {
+  background-color: black;
+  border: #000;
+}
+
+footer .footerAll {
+  width: 100%;
+  padding: 128px 0;
+  background-color: #333333;
+  display: flex;
+}
+footer .footerAll .container .footerContent {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footerAll .container .footerContent .footerAbout {
+  padding: 0 15px;
+  width: 356px;
+}
+footer .footerAll .container .footerContent .footerAbout h3 {
+  margin: 0 0 24px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+footer .footerAll .container .footerContent .footerAbout p {
+  margin-bottom: 16px;
+  color: #737373;
+}
+footer .footerAll .container .footerContent .footerLinks {
+  padding: 0 15px;
+}
+footer .footerAll .container .footerContent .footerLinks h3 {
+  margin: 0 0 24px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+footer .footerAll .container .footerContent .footerLinks .linksList {
+  padding-bottom: 6px;
+}
+footer .footerAll .container .footerContent .footerLinks .linksList .linksItem {
+  padding-bottom: 10px;
+}
+footer .footerAll .container .footerContent .footerLinks .linksList .linksItem a {
+  color: #838383;
+}
+footer .footerAll .container .footerContent .footerSocials {
+  padding: 0 15px;
+}
+footer .footerAll .container .footerContent .footerSocials h3 {
+  margin: 0 0 24px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+footer .footerAll .container .footerContent .footerSocials .footerIcons {
+  display: flex;
+  gap: 32px;
+}
+footer .footerAll .container .footerContent .footerSocials .footerIcons a i {
+  color: #999999;
+}
+footer .footerAll .container .footerContent .footerSubscribe {
+  padding: 0 15px;
+}
+footer .footerAll .container .footerContent .footerSubscribe h3 {
+  margin: 0 0 24px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+footer .footerAll .container .footerContent .footerSubscribe .row {
+  position: relative;
+}
+footer .footerAll .container .footerContent .footerSubscribe .row input {
+  border-radius: 30px;
+  border: 1px solid;
+  border-color: #6c757d;
+  height: 44px;
+  width: 155px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 6px 12px;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  outline: none;
+}
+footer .footerAll .container .footerContent .footerSubscribe .row button {
+  position: absolute;
+  width: 101px;
+  height: 44px;
+  padding: 6px 12px;
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  right: -87px;
+  outline: none;
+  border: 1px solid #007bff;
+}/*# sourceMappingURL=main.css.map */
