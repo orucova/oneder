@@ -6,6 +6,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Work Sans", sans-serif;
@@ -26,7 +27,6 @@ header {
   // * ------------------------------ Start header ------------------------------ */
   .headerAll {
     width: 100%;
-    height: 58px;
     padding: 10px 0px;
     display: flex;
     justify-content: space-between;
@@ -47,11 +47,11 @@ header {
         .navBar {
           display: flex;
           padding-left: 40px;
-
           .navList {
             display: flex;
             gap: 40px;
             .navItem {
+              position: relative;
               a {
                 color: #000;
                 transition: 0.4s ease;
@@ -63,7 +63,50 @@ header {
                 color: #007bff;
               }
               .dropdownList {
-                display: none;
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+                top: 40%;
+                position: absolute;
+                text-align: left;
+                border-top: 2px solid #007bff;
+                box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.1);
+                padding: 0px 0;
+                margin-top: 20px;
+                margin-left: 0px;
+                background: #fff;
+                transform: translateY(10px);
+                transition: 0.2s ease;
+                z-index: 9999;
+                .dropdownItem {
+                  width: 210px;
+                  a {
+                    display: block;
+                    padding: 9px 20px;
+                  }
+                }
+                #one {
+                  visibility: hidden;
+                  opacity: 0;
+                  top: 120px;
+                  right: -213px;
+                  transform: translateY(10px);
+                  transition: 0.2s ease;
+                }
+                #four:hover {
+                  #one {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateY(0);
+                  }
+                }
+              }
+            }
+            .about:hover {
+              .dropdownList {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
               }
             }
           }
@@ -148,6 +191,7 @@ main {
               border-radius: 30px;
               padding: 14px 30px;
               display: inline-block;
+              transition: 0.3s ease;
               &:hover {
                 background-color: black;
               }
@@ -259,6 +303,7 @@ main {
     }
   }
   //* ---------------------------- End team section ---------------------------- */
+
   //? -------------------------- Start contact section ------------------------- */
   .contactSection {
     background: #f8f9fa;
@@ -370,6 +415,9 @@ main {
               background-color: #fff;
               border: 1px solid #ced4da;
               margin: 0;
+              &:focus {
+                border: 1px solid #007bff;
+              }
             }
           }
         }
@@ -391,6 +439,9 @@ main {
           color: #495057;
           background-color: #fff;
           border: 1px solid #ced4da;
+          &:focus {
+            border: 1px solid #007bff;
+          }
         }
         textarea {
           height: 181px;
@@ -411,6 +462,9 @@ main {
           color: #495057;
           resize: none;
           outline: none;
+          &:focus {
+            border: 1px solid #007bff;
+          }
         }
         button {
           outline: none;
@@ -479,6 +533,10 @@ footer {
             .linksItem {
               a {
                 color: #838383;
+                transition: 0.3s ease;
+                &:hover {
+                  color: white;
+                }
               }
               padding-bottom: 10px;
             }
@@ -497,8 +555,10 @@ footer {
             display: flex;
             gap: 32px;
             a {
-              i {
-                color: #999999;
+              color: #999999;
+              transition: 0.3s ease;
+              &:hover {
+                color: white;
               }
             }
           }
@@ -549,6 +609,13 @@ footer {
             }
           }
         }
+      }
+      .line {
+        display: inline-block;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        height: 1px;
+        margin-top: 96px;
       }
     }
   }

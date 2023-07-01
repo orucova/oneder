@@ -5,6 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -54,6 +55,9 @@ header .headerAll .container .headerContent .navBar .navList {
   display: flex;
   gap: 40px;
 }
+header .headerAll .container .headerContent .navBar .navList .navItem {
+  position: relative;
+}
 header .headerAll .container .headerContent .navBar .navList .navItem a {
   color: #000;
   transition: 0.4s ease;
@@ -65,7 +69,46 @@ header .headerAll .container .headerContent .navBar .navList .navItem .active {
   color: #007bff;
 }
 header .headerAll .container .headerContent .navBar .navList .navItem .dropdownList {
-  display: none;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 40%;
+  position: absolute;
+  text-align: left;
+  border-top: 2px solid #007bff;
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.1);
+  padding: 0px 0;
+  margin-top: 20px;
+  margin-left: 0px;
+  background: #fff;
+  transform: translateY(10px);
+  transition: 0.2s ease;
+  z-index: 9999;
+}
+header .headerAll .container .headerContent .navBar .navList .navItem .dropdownList .dropdownItem {
+  width: 210px;
+}
+header .headerAll .container .headerContent .navBar .navList .navItem .dropdownList .dropdownItem a {
+  display: block;
+  padding: 9px 20px;
+}
+header .headerAll .container .headerContent .navBar .navList .navItem .dropdownList #one {
+  visibility: hidden;
+  opacity: 0;
+  top: 120px;
+  right: -213px;
+  transform: translateY(10px);
+  transition: 0.2s ease;
+}
+header .headerAll .container .headerContent .navBar .navList .navItem .dropdownList #four:hover #one {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+header .headerAll .container .headerContent .navBar .navList .about:hover .dropdownList {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 main .aboutSection {
@@ -140,6 +183,7 @@ main .aboutSection .container .aboutContent .aboutInfo .btnCont .contactBtn {
   border-radius: 30px;
   padding: 14px 30px;
   display: inline-block;
+  transition: 0.3s ease;
 }
 main .aboutSection .container .aboutContent .aboutInfo .btnCont .contactBtn:hover {
   background-color: black;
@@ -346,6 +390,9 @@ main .contactSection .container .contactForm .firstNameInput #id input {
   border: 1px solid #ced4da;
   margin: 0;
 }
+main .contactSection .container .contactForm .firstNameInput #id input:focus {
+  border: 1px solid #007bff;
+}
 main .contactSection .container .contactForm label {
   font-size: 16px;
   color: #000;
@@ -364,6 +411,9 @@ main .contactSection .container .contactForm input {
   color: #495057;
   background-color: #fff;
   border: 1px solid #ced4da;
+}
+main .contactSection .container .contactForm input:focus {
+  border: 1px solid #007bff;
 }
 main .contactSection .container .contactForm textarea {
   height: 181px;
@@ -384,6 +434,9 @@ main .contactSection .container .contactForm textarea {
   color: #495057;
   resize: none;
   outline: none;
+}
+main .contactSection .container .contactForm textarea:focus {
+  border: 1px solid #007bff;
 }
 main .contactSection .container .contactForm button {
   outline: none;
@@ -448,6 +501,10 @@ footer .footerAll .container .footerContent .footerLinks .linksList .linksItem {
 }
 footer .footerAll .container .footerContent .footerLinks .linksList .linksItem a {
   color: #838383;
+  transition: 0.3s ease;
+}
+footer .footerAll .container .footerContent .footerLinks .linksList .linksItem a:hover {
+  color: white;
 }
 footer .footerAll .container .footerContent .footerSocials {
   padding: 0 15px;
@@ -463,8 +520,12 @@ footer .footerAll .container .footerContent .footerSocials .footerIcons {
   display: flex;
   gap: 32px;
 }
-footer .footerAll .container .footerContent .footerSocials .footerIcons a i {
+footer .footerAll .container .footerContent .footerSocials .footerIcons a {
   color: #999999;
+  transition: 0.3s ease;
+}
+footer .footerAll .container .footerContent .footerSocials .footerIcons a:hover {
+  color: white;
 }
 footer .footerAll .container .footerContent .footerSubscribe {
   padding: 0 15px;
@@ -510,4 +571,11 @@ footer .footerAll .container .footerContent .footerSubscribe .row button {
   right: -87px;
   outline: none;
   border: 1px solid #007bff;
+}
+footer .footerAll .container .line {
+  display: inline-block;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 1px;
+  margin-top: 96px;
 }/*# sourceMappingURL=main.css.map */
